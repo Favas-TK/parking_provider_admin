@@ -1,5 +1,8 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:parkingadmin/bookings/view/booking.dart';
+import 'package:parkingadmin/homepage/view/homepage.dart';
+import 'package:parkingadmin/payments/view/payments.dart';
 
 import 'package:parkingadmin/profile/profile.dart';
 
@@ -20,9 +23,9 @@ class _DashboardState extends State<Dashboard> {
   }
 
   final List<Widget> _widgets = [
-    Text('page1'),
-    Text('page 2'),
-    Text('page 3'),
+    HomePage(),
+    Bookings(),
+   Payments(),
     Profile(),
   ];
 
