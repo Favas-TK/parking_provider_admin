@@ -33,6 +33,8 @@ class _AddParkingAreaState extends State<AddParkingArea> {
   TextEditingController parkingInformation = TextEditingController();
 
   TextEditingController parkingFacilities = TextEditingController();
+
+  TextEditingController parkingSlots = TextEditingController();
   List<XFile?>? imagefiles;
 
   final imgpicker = ImagePicker();
@@ -66,7 +68,7 @@ class _AddParkingAreaState extends State<AddParkingArea> {
             Navigator.push(
               context,
               MaterialPageRoute<dynamic>(
-                builder: (context) => const HomePage(),
+                builder: (context) => HomePage(),
               ),
             );
           }
@@ -219,6 +221,18 @@ class _AddParkingAreaState extends State<AddParkingArea> {
                         ),
                       ),
                     ),
+                    SizedBox(
+                      height: 40,
+                      child: TextFormField(
+                        controller: parkingSlots,
+                        decoration: InputDecoration(
+                          labelText: 'Enter Slots',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                        ),
+                      ),
+                    ),
                     const SizedBox(
                       height: 10,
                     ),
@@ -263,11 +277,13 @@ class _AddParkingAreaState extends State<AddParkingArea> {
                             onPressed: () {
                               parkingDetails.add(
                                 AddDetailEvent(
-                                    image: imagefiles,
-                                    name: parkingAreaName.text,
-                                    description: parkingInformation.text,
-                                    locationName: parkingLocation.text,
-                                    facilities: parkingFacilities.text),
+                                  image: imagefiles,
+                                  name: parkingAreaName.text,
+                                  description: parkingInformation.text,
+                                  locationName: parkingLocation.text,
+                                  facilities: parkingFacilities.text,
+                                  slots: parkingSlots.text,
+                                ),
                               );
                             },
                           ),

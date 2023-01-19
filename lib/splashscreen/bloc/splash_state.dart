@@ -1,10 +1,10 @@
-part of 'splash_bloc.dart';
+// part of 'splash_bloc.dart';
 
-@immutable
-abstract class SplashState {}
+// @immutable
+// abstract class SplashState {}
 
-class SplashInitial extends SplashState {}
+// class SplashInitial extends SplashState {}
 
-class NavigateToLoginState extends SplashState {}
+// class NavigateToLoginState extends SplashState {}
 
-class  NavigateToHomeState extends SplashState {}
+// class  NavigateToHomeState extends SplashState {}

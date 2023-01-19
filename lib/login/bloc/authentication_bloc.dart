@@ -17,10 +17,10 @@ class AuthenticationBloc
             email: event.mail,
             password: event.password,
           );
-            await SharedPref().setUserData(
-            event.mail,
-            auth.currentUser!.uid,
-          );
+          //   await SharedPref().setUserData(
+          //   event.mail,
+          //   auth.currentUser!.uid,
+          // );
 
           emit(LoginSuccess());
         } on FirebaseAuthException catch (e) {

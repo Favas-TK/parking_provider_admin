@@ -38,12 +38,13 @@ class InformationAddBloc
             imageList.add(imagelink);
           }
 
-          await parkingAdd.doc(parkingId).set({
+          await parkingAdd.doc(auth.currentUser!.uid).set({
             'Area_Name': event.name,
             'Location_Name': event.locationName,
             'Information': event.description,
             'Facilities': event.description,
             'Spot_image': imageList,
+            'Slots': event.slots,
             'user_id': userId,
           });
           emit(DetailsAddSucess());

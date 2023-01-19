@@ -11,6 +11,7 @@ class AddDetailEvent extends InformationAddEvent{
     required this.description,
     required this.locationName,
     required this.facilities,
+    required this.slots,
   });
 
   List<XFile?>? image;
@@ -18,4 +19,5 @@ class AddDetailEvent extends InformationAddEvent{
   String description;
   String locationName;
    String facilities;
+   String slots;
 }
