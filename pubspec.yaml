@@ -21,7 +21,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_otp_text_field: ^1.1.1
-  flutter_screenutil: ^5.6.0
+  flutter_screenutil: ^5.7.0
   flutter_svg: ^1.1.6
   flutter_udid: ^2.0.1
   font_awesome_flutter: ^10.3.0
